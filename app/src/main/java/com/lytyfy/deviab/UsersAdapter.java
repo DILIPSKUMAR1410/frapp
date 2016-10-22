@@ -27,11 +27,13 @@ public class UsersAdapter extends ArrayAdapter<User> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_user, parent, false);
         }
         // Lookup view for data population
-        TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
-        TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
+        TextView name = (TextView) convertView.findViewById(R.id.name);
+        TextView loanamount = (TextView) convertView.findViewById(R.id.loanamount);
+        TextView emi = (TextView) convertView.findViewById(R.id.emi);
         // Populate the data into the template view using the data object
-        tvName.setText(user.name);
-        tvHome.setText(user.hometown);
+        name.setText(user.name);
+        loanamount.setText(user.loanamount);
+        emi.setText(user.emi);
         // Return the completed view to render on screen
         return convertView;
     }

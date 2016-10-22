@@ -6,10 +6,13 @@ package com.lytyfy.deviab;
 
 public class User {
     public String name;
-    public String hometown;
+    public String loanamount;
+    public String emi;
 
-    public User(String name, String hometown) {
+
+    public User(String name,String loanamount, String emi) {
         this.name = name;
-        this.hometown = hometown;
+        this.loanamount = loanamount;
+        this.emi = emi;
     }
 }

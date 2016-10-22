@@ -29,7 +29,7 @@ public class RepaymentFragment extends ListFragment {
 
 
         for(int l=0; l<=5; l++){
-            User newUser = new User("Nathan", "San Diego");
+            User newUser = new User("Nathan", "5000" ,"100");
             adapter.add(newUser);
         }
 
