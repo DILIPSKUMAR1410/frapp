@@ -14,14 +14,11 @@
     android:orientation="vertical"
     app:layout_scrollFlags="scroll">
 
-
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="android.app.ListFragment"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+    <FrameLayout
         android:id="@+id/fragmentPlace"
-        android:layout_weight="1.84" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
+
 
