@@ -18,7 +18,7 @@ public class RepaymentFragment extends ListFragment {
             R.layout.fragment_repayment, container, false);
 
         // Construct the data source
-        ArrayList<User> arrayOfUsers = new ArrayList<User>();
+        ArrayList<Borrower> arrayOfUsers = new ArrayList<Borrower>();
 // Create the adapter to convert the array to views
         UsersAdapter adapter = new UsersAdapter(getActivity(), arrayOfUsers);
 // Attach the adapter to a ListView
@@ -29,7 +29,7 @@ public class RepaymentFragment extends ListFragment {
 
 
         for(int l=0; l<=5; l++){
-            User newUser = new User("Nathan", "5000" ,"100");
+            Borrower newUser = new Borrower("Nathan", "5000" ,"100");
             adapter.add(newUser);
         }
 

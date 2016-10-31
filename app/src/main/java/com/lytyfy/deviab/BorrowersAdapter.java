@@ -6,34 +6,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 /**
- * Created by vasu on 21/10/16.
+ * Created by sonu on 29/10/16.
  */
 
-public class UsersAdapter extends ArrayAdapter<Borrower> {
-    public UsersAdapter(Context context, ArrayList<Borrower> users) {
+public class BorrowersAdapter extends ArrayAdapter<InstallationBorrower> {
+    public BorrowersAdapter(Context context, ArrayList<InstallationBorrower> users) {
         super(context, 0, users);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
-        Borrower user = getItem(position);
+        InstallationBorrower user = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_user, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.installation_borrower, parent, false);
         }
         // Lookup view for data population
-        TextView name = (TextView) convertView.findViewById(R.id.name);
-        TextView loanamount = (TextView) convertView.findViewById(R.id.loanamount);
-        TextView emi = (TextView) convertView.findViewById(R.id.emi);
+        TextView borrowname = (TextView) convertView.findViewById(R.id.borrowname);
         // Populate the data into the template view using the data object
-        name.setText(user.name);
-        loanamount.setText(user.loanamount);
-        emi.setText(user.emi);
+        borrowname.setText(user.borrowname);
         // Return the completed view to render on screen
         return convertView;
     }
