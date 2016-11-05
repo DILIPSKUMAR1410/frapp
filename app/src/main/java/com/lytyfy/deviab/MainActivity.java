@@ -17,6 +17,10 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText editTextEmail;
     private EditText editTextPassword;
+    private SharedPreferences appSharedPrefs;
+    private SharedPreferences.Editor prefsEditor;
 
     private Button buttonRegister;
 
@@ -83,5 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Onlogin();
         }
     }
+
 
 }
