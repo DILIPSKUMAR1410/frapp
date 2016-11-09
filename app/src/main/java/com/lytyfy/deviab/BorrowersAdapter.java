@@ -30,13 +30,11 @@ public class BorrowersAdapter extends ArrayAdapter<InstallationBorrower> {
         TextView borrowname = (TextView) convertView.findViewById(R.id.borrowname);
         TextView address = (TextView) convertView.findViewById(R.id.address);
         TextView mobile_number = (TextView) convertView.findViewById(R.id.mobile_number);
-        TextView downpayment = (TextView) convertView.findViewById(R.id.downpayment);
 
         // Populate the data into the template view using the data object
         borrowname.setText(user.borrowname);
         address.setText(user.address);
         mobile_number.setText(user.mobile_number);
-        downpayment.setText(user.downpayment);
         // Return the completed view to render on screen
         return convertView;
     }

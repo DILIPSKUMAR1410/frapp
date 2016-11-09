@@ -49,21 +49,6 @@
         android:textStyle="normal|bold" />
 
     <TextView
-        android:id="@+id/downpayment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView10"
-        android:layout_alignEnd="@+id/address"
-        android:layout_alignLeft="@+id/address"
-        android:layout_alignRight="@+id/address"
-        android:layout_alignStart="@+id/address"
-        android:text="2000"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textSize="14sp"
-        android:textStyle="normal|bold" />
-
-    <TextView
         android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,6 +89,57 @@
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="amount"
+        android:ems="10"
+        android:layout_below="@+id/address"
+        android:layout_alignLeft="@+id/address"
+        android:layout_alignStart="@+id/address"
+        android:id="@+id/inputAmount"
+        android:textSize="14sp" />
+
+    <TextView
+        android:text="product no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputAmount"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:id="@+id/textView3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textStyle="normal|bold"
+        android:textSize="14sp"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView10"
+        android:layout_alignLeft="@+id/inputAmount"
+        android:layout_alignStart="@+id/inputAmount"
+        android:id="@+id/serialnumber"
+        android:textSize="14sp"
+        android:hint="number" />
+
+    <Button
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:id="@+id/button2"
+        android:layout_below="@+id/serialnumber"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/material_drawer_dark_primary_text"
+        android:layout_alignRight="@+id/textView10"
+        android:layout_alignEnd="@+id/textView10"
+        android:onClick="onClick"/>
 
 
 </RelativeLayout>
