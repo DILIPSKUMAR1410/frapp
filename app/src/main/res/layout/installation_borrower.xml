@@ -3,107 +3,107 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1"
-    android:layout_marginTop="90sp">
+    android:layout_marginTop="90sp"
+    android:weightSum="1">
 
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/avatar1"
-        android:id="@+id/imageView"
+        android:layout_alignParentLeft="true"
 
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"/>
+        app:srcCompat="@mipmap/avatar1" />
 
     <TextView
         android:id="@+id/borrowname"
         android:layout_width="92dp"
         android:layout_height="39dp"
-        android:text="name"
+        android:layout_alignTop="@+id/imageView"
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView"
-        android:textStyle="normal|bold"
-        android:layout_alignTop="@+id/imageView"
-        android:textAllCaps="false" />
+        android:layout_toRightOf="@+id/imageView"
+        android:text="name"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textStyle="normal|bold" />
 
     <TextView
-        android:text="8109393724"
+        android:id="@+id/mobile_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/borrowname"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="68dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/borrowname"
         android:layout_marginEnd="68dp"
-        android:id="@+id/mobile_number"
+        android:layout_marginRight="68dp"
+        android:text="8109393724"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textSize="14sp"
-        android:textStyle="normal|bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+        android:textStyle="normal|bold" />
 
     <TextView
-        android:text="2000"
+        android:id="@+id/downpayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView10"
-        android:layout_alignRight="@+id/address"
         android:layout_alignEnd="@+id/address"
-        android:id="@+id/downpayment"
-        android:textStyle="normal|bold"
-        android:textSize="14sp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:layout_alignLeft="@+id/address"
+        android:layout_alignRight="@+id/address"
         android:layout_alignStart="@+id/address"
-        android:textAllCaps="false" />
+        android:text="2000"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="14sp"
+        android:textStyle="normal|bold" />
 
     <TextView
-        android:text=" vinayak vihar colony"
+        android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/address"
-        android:textSize="14sp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textStyle="normal|bold"
-        android:layout_below="@+id/borrowname"
         android:layout_alignLeft="@+id/mobile_number"
         android:layout_alignStart="@+id/mobile_number"
-        android:textAllCaps="false" />
+        android:layout_below="@+id/borrowname"
+        android:text=" vinayak vihar colony"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="14sp"
+        android:textStyle="normal|bold" />
 
     <TextView
-        android:text="downpayment"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView10"
-        android:textSize="14sp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textStyle="normal|bold"
-        android:layout_below="@+id/address"
         android:layout_alignLeft="@+id/textView12"
         android:layout_alignStart="@+id/textView12"
-        android:textAllCaps="false" />
+        android:layout_below="@+id/address"
+        android:layout_marginTop="12dp"
+        android:text="downpayment"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="14sp"
+        android:textStyle="normal|bold" />
 
     <TextView
-        android:text="address"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView10"
-        android:id="@+id/textView12"
-        android:layout_below="@+id/borrowname"
-        android:textStyle="normal|bold"
-        android:layout_alignLeft="@+id/borrowname"
-        android:layout_alignStart="@+id/borrowname"
-        android:layout_alignRight="@+id/borrowname"
         android:layout_alignEnd="@+id/borrowname"
+        android:layout_alignLeft="@+id/borrowname"
+        android:layout_alignRight="@+id/borrowname"
+        android:layout_alignStart="@+id/borrowname"
+        android:layout_below="@+id/borrowname"
+        android:text="address"
+        android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textAllCaps="false" />
+        android:textStyle="normal|bold" />
 
 
 </RelativeLayout>

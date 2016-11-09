@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        if(position==5) {
+                        if (position == 5) {
                             Intent logoutIntent = new Intent(HomeActivity.this, MainActivity.class);
                             HomeActivity.this.startActivity(logoutIntent);
                             return false;
@@ -91,7 +91,7 @@ public class HomeActivity extends AppCompatActivity {
     public void selectFrag(int position) {
         Fragment fr = null;
 
-        switch (position){
+        switch (position) {
             case 0:
                 fr = new OnboardingFragment();
                 break;

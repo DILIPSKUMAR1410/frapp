@@ -30,42 +30,49 @@
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Name"
             android:inputType="textPersonName" />
+
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Name"
             android:inputType="textPersonName" />
+
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Name"
             android:inputType="textPersonName" />
+
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Name"
             android:inputType="textPersonName" />
+
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Name"
             android:inputType="textPersonName" />
+
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Name"
             android:inputType="textPersonName" />
+
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Name"
             android:inputType="textPersonName" />
+
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -88,13 +95,13 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/colorPrimaryDark"
+            android:breakStrategy="balanced"
+            android:fitsSystemWindows="true"
             android:gravity="top"
             android:hint="Your Message"
-            android:fitsSystemWindows="true"
-            android:breakStrategy="balanced"
             android:inputType="textMultiLine"
-            android:singleLine="false"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:singleLine="false" />
 
         <Button
             android:layout_width="wrap_content"

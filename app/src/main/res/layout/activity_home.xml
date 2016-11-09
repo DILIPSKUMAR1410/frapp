@@ -5,15 +5,15 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.lytyfy.deviab.MainActivity"
-    android:weightSum="1"
     android:orientation="vertical"
-    app:layout_scrollFlags="scroll">
+    android:weightSum="1"
+    app:layout_scrollFlags="scroll"
+    tools:context="com.lytyfy.deviab.MainActivity">
 
     <FrameLayout
         android:id="@+id/fragmentPlace"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
 

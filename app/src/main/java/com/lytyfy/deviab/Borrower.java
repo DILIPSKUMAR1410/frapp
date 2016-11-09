@@ -10,7 +10,7 @@ public class Borrower {
     public String emi;
 
 
-    public Borrower(String name,String loanamount, String emi) {
+    public Borrower(String name, String loanamount, String emi) {
         this.name = name;
         this.loanamount = loanamount;
         this.emi = emi;

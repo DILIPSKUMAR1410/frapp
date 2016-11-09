@@ -14,8 +14,8 @@ public class RepaymentFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-    View v = inflater.inflate(
-            R.layout.fragment_repayment, container, false);
+        View v = inflater.inflate(
+                R.layout.fragment_repayment, container, false);
 
         // Construct the data source
         ArrayList<Borrower> arrayOfUsers = new ArrayList<Borrower>();
@@ -28,11 +28,10 @@ public class RepaymentFragment extends ListFragment {
         // Add item to adapter
 
 
-        for(int l=0; l<=5; l++){
-            Borrower newUser = new Borrower("Nathan", "5000" ,"100");
+        for (int l = 0; l <= 5; l++) {
+            Borrower newUser = new Borrower("Nathan", "5000", "100");
             adapter.add(newUser);
         }
-
 
 
         return v;

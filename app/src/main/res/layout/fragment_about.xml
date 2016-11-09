@@ -11,13 +11,13 @@
     tools:context="com.lytyfy.deviab.AboutFragment">
 
     <TextView
-        android:text="About"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="122dp"
-        android:id="@+id/textView6"
+        android:text="About"
         android:textSize="30sp"
         android:textStyle="normal|bold" />
 </RelativeLayout>
