@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,9 +28,20 @@ public class BorrowersAdapter extends ArrayAdapter<InstallationBorrower> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.installation_borrower, parent, false);
         }
         // Lookup view for data population
-        TextView borrowname = (TextView) convertView.findViewById(R.id.borrowname);
+        final TextView borrowname = (TextView) convertView.findViewById(R.id.borrowname);
         TextView address = (TextView) convertView.findViewById(R.id.address);
         TextView mobile_number = (TextView) convertView.findViewById(R.id.mobile_number);
+        Button Button2= (Button)  convertView.findViewById(R.id.button2);
+
+        Button2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                System.out.println(">>>>>>>>>>>>>>>>>>LTG>>>>>>>>>>>>"+borrowname.getText());
+            }
+
+        });
 
         // Populate the data into the template view using the data object
         borrowname.setText(user.borrowname);
