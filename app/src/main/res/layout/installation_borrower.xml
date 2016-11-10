@@ -21,20 +21,6 @@
         app:srcCompat="@mipmap/avatar1" />
 
     <TextView
-        android:id="@+id/borrowname"
-        android:layout_width="92dp"
-        android:layout_height="39dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_marginLeft="29dp"
-        android:layout_marginStart="29dp"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_toRightOf="@+id/imageView"
-        android:text="name"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textStyle="normal|bold" />
-
-    <TextView
         android:id="@+id/mobile_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,6 +126,44 @@
         android:layout_alignRight="@+id/textView10"
         android:layout_alignEnd="@+id/textView10"
         android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/borrowname"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:text="name"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textStyle="normal|bold"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:text="customer Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/borrowerid"
+        android:layout_alignLeft="@+id/borrowname"
+        android:layout_alignStart="@+id/borrowname"
+        android:layout_alignParentTop="true"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textStyle="normal|bold"/>
+
+    <TextView
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/mobile_number"
+        android:layout_alignStart="@+id/mobile_number"
+        android:id="@+id/borrower_id"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textStyle="normal|bold"/>
 
 
 </RelativeLayout>

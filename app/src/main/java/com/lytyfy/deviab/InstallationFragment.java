@@ -32,6 +32,7 @@ public class InstallationFragment extends ListFragment {
     String first_name;
     String last_name;
     String address;
+    String borrower_id;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -61,8 +62,9 @@ public class InstallationFragment extends ListFragment {
                                 first_name = x.getString("borrower__first_name");
                                 last_name = x.getString("borrower__last_name");
                                 address = x.getString("borrower__address");
+                                borrower_id = x.getString("borrower_id");
 
-                                InstallationBorrower newUser = new InstallationBorrower(first_name+" "+last_name, address, "8109109789", "3000");
+                                InstallationBorrower newUser = new InstallationBorrower(first_name+" "+last_name, address, "8109109789",borrower_id);
                                 adapter.add(newUser);
                             } catch (JSONException e) {
                                 e.printStackTrace();

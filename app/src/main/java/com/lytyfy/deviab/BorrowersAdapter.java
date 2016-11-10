@@ -31,6 +31,8 @@ public class BorrowersAdapter extends ArrayAdapter<InstallationBorrower> {
         final TextView borrowname = (TextView) convertView.findViewById(R.id.borrowname);
         TextView address = (TextView) convertView.findViewById(R.id.address);
         TextView mobile_number = (TextView) convertView.findViewById(R.id.mobile_number);
+        TextView borrower_id = (TextView) convertView.findViewById(R.id.borrower_id);
+
         Button Button2= (Button)  convertView.findViewById(R.id.button2);
 
         Button2.setOnClickListener(new View.OnClickListener()
@@ -47,6 +49,8 @@ public class BorrowersAdapter extends ArrayAdapter<InstallationBorrower> {
         borrowname.setText(user.borrowname);
         address.setText(user.address);
         mobile_number.setText(user.mobile_number);
+        borrower_id.setText(user.borrower_id);
+
         // Return the completed view to render on screen
         return convertView;
     }
