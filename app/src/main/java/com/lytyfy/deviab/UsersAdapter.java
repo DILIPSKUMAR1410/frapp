@@ -54,6 +54,7 @@ public class UsersAdapter extends ArrayAdapter<Borrower> {
          TextView address = (TextView) convertView.findViewById(R.id.address);
         final EditText editAmount = (EditText) convertView.findViewById(R.id.amount);
 
+
         Button Button2= (Button)  convertView.findViewById(R.id.button);
 
         Button2.setOnClickListener(new View.OnClickListener()

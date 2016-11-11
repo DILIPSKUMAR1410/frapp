@@ -67,11 +67,12 @@ public class RepaymentFragment extends ListFragment {
                                 borrower_id = x.getString("borrower_id");
                                 tenure_left = x.getString("borrower__loans__current_status__tenure_left");
                                 address = x.getString("borrower__address");
+                                if(!loanamount.equals("null")  && !interest.equals("null") ) {
+                                    Double fnf = Double.parseDouble(loanamount) + Double.parseDouble(interest);
+                                    Borrower newUser = new Borrower(borrower_id,name, Double.toString(fnf), emi,tenure_left,address);
+                                    adapter.add(newUser);
+                                }
 
-
-
-                                Borrower newUser = new Borrower(borrower_id,name,loanamount, emi,tenure_left,address);
-                                adapter.add(newUser);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
