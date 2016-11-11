@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="30sp"
+    android:layout_marginTop="220sp"
     android:weightSum="1">
 
 
@@ -15,7 +15,8 @@
         android:layout_alignStart="@+id/loanamount"
         android:layout_below="@+id/loanamount"
         android:text="EMI"
-        android:textAlignment="center" />
+        android:textAlignment="viewStart" />
+
 
     <TextView
         android:id="@+id/loanamount"
@@ -24,8 +25,9 @@
         android:layout_alignLeft="@+id/name"
         android:layout_alignStart="@+id/name"
         android:layout_below="@+id/name"
-        android:text="loanamount"
-        android:textAlignment="center" />
+        android:text="4000"
+        android:textAlignment="viewStart" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -34,7 +36,10 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
         android:layout_alignTop="@+id/name"
-        android:text="Name" />
+        android:text="Name"
+        android:layout_toLeftOf="@+id/name"
+        android:layout_toStartOf="@+id/name" />
+
 
     <TextView
         android:id="@+id/textView2"
@@ -45,8 +50,9 @@
         android:layout_below="@+id/name"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
-        android:text="Loan Amount"
+        android:text="Loan Amount Left"
         android:textAlignment="center" />
+
 
     <TextView
         android:id="@+id/textView4"
@@ -58,15 +64,6 @@
         android:text="EMI"
         android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="92dp"
-        android:layout_height="39dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:text="Name"
-        android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -80,18 +77,6 @@
         android:layout_toRightOf="@+id/emi"
         app:srcCompat="@mipmap/avatar1" />
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:width="100dp"
-        android:ems="10"
-        android:hint="Amount"
-        android:inputType="number"
-        android:layout_below="@+id/emi"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
 
     <Button
         android:id="@+id/button"
@@ -103,9 +88,106 @@
         android:textColor="@color/material_drawer_dark_primary_text"
         android:textSize="12sp"
         android:textStyle="normal|bold"
-        android:layout_alignBaseline="@+id/editText4"
-        android:layout_alignBottom="@+id/editText4"
+        android:layout_alignTop="@+id/amount"
         android:layout_alignLeft="@+id/emi"
         android:layout_alignStart="@+id/emi" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="92dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="38dp"
+        android:text="Name"
+        android:textAlignment="viewStart"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:text="Borrower Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:id="@+id/textView8" />
+
+
+    <TextView
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/borrower_id"
+        android:layout_alignLeft="@+id/tenure_left"
+        android:layout_alignStart="@+id/tenure_left" />
+
+
+    <TextView
+        android:text="Tenure Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emi"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:id="@+id/textView9" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emi_date" />
+
+
+    <TextView
+        android:text="address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_marginTop="23dp"
+        android:id="@+id/textView14" />
+
+
+    <TextView
+        android:text="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emi"
+        android:id="@+id/tenure_left"
+        android:layout_alignLeft="@+id/emi"
+        android:layout_alignStart="@+id/emi" />
+
+
+    <TextView
+        android:text="vinayak vihar colony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView14"
+        android:id="@+id/address"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:textAlignment="viewStart"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView" />
+
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:ems="10"
+        android:hint="Amount"
+        android:inputType="number"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/textView14"
+        android:layout_alignLeft="@+id/textView14"
+        android:layout_alignStart="@+id/textView14" />
+
 
 </RelativeLayout>
