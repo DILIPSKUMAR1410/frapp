@@ -3,6 +3,7 @@ package com.lytyfy.deviab;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -33,17 +34,18 @@ public class HomeActivity extends AppCompatActivity {
                 .withTranslucentStatusBar(false)
                 .withDrawerLayout(R.layout.material_drawer_fits_not)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName("Onboarding"),
                         new PrimaryDrawerItem().withName("Installation"),
                         new PrimaryDrawerItem().withName("Repayment"),
-                        new PrimaryDrawerItem().withName("Profile"),
-                        new PrimaryDrawerItem().withName("About"),
                         new PrimaryDrawerItem().withName("Logout")
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        if (position == 5) {
+                        if (position == 2) {
+                            Context context = getApplicationContext();
+                            AppPrefs appPrefs = new AppPrefs(context);
+                            appPrefs.clearToken();
+
                             Intent logoutIntent = new Intent(HomeActivity.this, MainActivity.class);
                             HomeActivity.this.startActivity(logoutIntent);
                             return false;
@@ -93,19 +95,10 @@ public class HomeActivity extends AppCompatActivity {
 
         switch (position) {
             case 0:
-                fr = new OnboardingFragment();
-                break;
-            case 1:
                 fr = new InstallationFragment();
                 break;
-            case 2:
+            case 1:
                 fr = new RepaymentFragment();
-                break;
-            case 3:
-                fr = new ProfileFragment();
-                break;
-            case 4:
-                fr = new AboutFragment();
                 break;
 
             default:

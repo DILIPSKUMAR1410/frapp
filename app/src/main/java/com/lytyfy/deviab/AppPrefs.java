@@ -45,4 +45,8 @@ public class AppPrefs {
     public void setToken(String _token) {
         prefsEditor.putString(token, _token).commit();
     }
+    public void clearToken(){
+        this.prefsEditor.clear();
+        this.prefsEditor.commit();
+    }
 }
