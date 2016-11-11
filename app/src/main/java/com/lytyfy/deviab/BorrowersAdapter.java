@@ -90,9 +90,7 @@ public class BorrowersAdapter extends ArrayAdapter<InstallationBorrower> {
 
                                 System.out.println(">>>>>>>>>>>success>>>>>>>>>>>>");
                                 System.out.println(response);
-                                if (resultFrag != null) {
-                                    resultFrag.refreshData(refreshedArray);
-                                }
+                                
 
                             }
                         },
@@ -124,7 +122,7 @@ public class BorrowersAdapter extends ArrayAdapter<InstallationBorrower> {
 
                 RequestQueue requestQueue = Volley.newRequestQueue(getContext());
                 requestQueue.add(jsonObjectRequest);
-                
+
 
             }
 
