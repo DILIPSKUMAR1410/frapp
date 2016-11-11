@@ -11,6 +11,7 @@ public class InstallationBorrower {
     public String borrower_id;
 
 
+
     public InstallationBorrower(String borrowname, String address, String mobile_number, String borrower_id) {
         this.borrowname = borrowname;
         this.address = address;
