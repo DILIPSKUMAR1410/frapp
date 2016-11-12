@@ -1,6 +1,8 @@
 package com.lytyfy.deviab;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,7 +88,6 @@ public class UsersAdapter extends ArrayAdapter<Borrower> {
 
                                 System.out.println(">>>>>>>>>>>success>>>>>>>>>>>>");
                                 System.out.println(response);
-
 
                             }
                         },

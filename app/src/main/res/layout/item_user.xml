@@ -19,17 +19,6 @@
 
 
     <TextView
-        android:id="@+id/loanamount"
-        android:layout_width="92dp"
-        android:layout_height="39dp"
-        android:layout_alignLeft="@+id/name"
-        android:layout_alignStart="@+id/name"
-        android:layout_below="@+id/name"
-        android:text="4000"
-        android:textAlignment="viewStart" />
-
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,8 +26,9 @@
         android:layout_alignStart="@+id/textView2"
         android:layout_alignTop="@+id/name"
         android:text="Name"
-        android:layout_toLeftOf="@+id/name"
-        android:layout_toStartOf="@+id/name" />
+        android:layout_toStartOf="@+id/name"
+        android:layout_alignRight="@+id/emi_date"
+        android:layout_alignEnd="@+id/emi_date" />
 
 
     <TextView
@@ -69,13 +59,11 @@
         android:id="@+id/imageView"
         android:layout_width="100sp"
         android:layout_height="80sp"
-        android:layout_alignBottom="@+id/emi"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/name"
-        android:layout_toEndOf="@+id/emi"
-        android:layout_toRightOf="@+id/emi"
-        app:srcCompat="@mipmap/avatar1" />
+        app:srcCompat="@mipmap/neha"
+        android:layout_alignBottom="@+id/emi" />
 
 
     <Button
@@ -91,17 +79,6 @@
         android:layout_alignTop="@+id/amount"
         android:layout_alignLeft="@+id/emi"
         android:layout_alignStart="@+id/emi" />
-
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="92dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="38dp"
-        android:text="Name"
-        android:textAlignment="viewStart"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
 
     <TextView
@@ -172,8 +149,9 @@
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
         android:textAlignment="viewStart"
-        android:layout_toLeftOf="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView" />
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
     <EditText
@@ -188,6 +166,29 @@
         android:layout_below="@+id/textView14"
         android:layout_alignLeft="@+id/textView14"
         android:layout_alignStart="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/loanamount"
+        android:layout_width="92dp"
+        android:layout_height="39dp"
+        android:text="4000"
+        android:textAlignment="viewStart"
+        android:layout_below="@+id/name"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="92dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="23dp"
+        android:text="Name"
+        android:textAlignment="viewStart"
+        android:layout_below="@+id/borrower_id"
+        android:layout_alignLeft="@+id/loanamount"
+        android:layout_alignStart="@+id/loanamount" />
 
 
 </RelativeLayout>

@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="70sp"
-        android:layout_height="80sp"
+        android:layout_height="150sp"
         android:layout_alignParentLeft="true"
 
         android:layout_alignParentStart="true"
@@ -18,21 +18,7 @@
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="15dp"
-        app:srcCompat="@mipmap/avatar1" />
-
-    <TextView
-        android:id="@+id/mobile_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/borrowname"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:text="8109393724"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textSize="14sp"
-        android:textStyle="normal|bold" />
+        app:srcCompat="@mipmap/neha" />
 
     <TextView
         android:id="@+id/address"
@@ -164,6 +150,21 @@
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textStyle="normal|bold"/>
+
+    <TextView
+        android:id="@+id/mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8109393724"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="14sp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/borrowname"
+        android:layout_alignBottom="@+id/borrowname"
+        android:layout_toRightOf="@+id/borrowname"
+        android:layout_toEndOf="@+id/borrowname"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
 
 
 </RelativeLayout>
