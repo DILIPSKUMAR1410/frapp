@@ -21,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -69,6 +70,8 @@ public class RepaymentFragment extends ListFragment {
                                 address = x.getString("borrower__address");
                                 if(!loanamount.equals("null")  && !interest.equals("null") ) {
                                     Double fnf = Double.parseDouble(loanamount) + Double.parseDouble(interest);
+                                    fnf =Double.parseDouble(new DecimalFormat("##.####").format(fnf));
+
                                     Borrower newUser = new Borrower(borrower_id,name, Double.toString(fnf), emi,tenure_left,address);
                                     adapter.add(newUser);
                                 }
