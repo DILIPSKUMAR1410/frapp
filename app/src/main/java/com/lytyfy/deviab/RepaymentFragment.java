@@ -60,7 +60,7 @@ public class RepaymentFragment extends ListFragment {
                             try {
                                 JSONObject x = response.getJSONObject(l);
                                 System.out.println(x);
-                                name = x.getString("borrower__first_name")+""+x.getString("borrower__last_name");
+                                name = x.getString("borrower__first_name")+" "+x.getString("borrower__last_name");
                                 loanamount = x.getString("borrower__loans__current_status__principal_left");
                                 interest = x.getString("borrower__loans__current_status__interest_left");
                                 emi = x.getString("borrower__loans__current_status__emr");
