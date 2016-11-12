@@ -1,7 +1,12 @@
 package com.lytyfy.deviab;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,61 +69,93 @@ public class UsersAdapter extends ArrayAdapter<Borrower> {
             @Override
             public void onClick(View v)
             {
-                String borrowerid = borrower_id.getText().toString();
-                String Amount = editAmount.getText().toString();
-                String transactions_type = "0";
-                String payment_mode = "4";
+                final String borrowerid = borrower_id.getText().toString();
+                final String Amount = editAmount.getText().toString();
+                final String transactions_type = "0";
+                final String payment_mode = "4";
+
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(getContext());
+
+                builder1.setMessage("Are you sure you want to Proceed..?");
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        "Submit",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                Map<String, String> params = new HashMap<String, String>();
+                                params.put("borrower_id", borrowerid);
+                                params.put("emi", Amount);
+                                params.put("transactions_type", transactions_type);
+                                params.put("payment_mode", payment_mode);
+
+
+                                JSONObject parameters = new JSONObject(params);
+                                System.out.println(">>>>>>>>>>>>>>>>>>LTG>>>>>>>>>>>>"+parameters);
+
+                                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, POST_REPAYMENT, parameters,
+                                        new Response.Listener<JSONObject>() {
+                                            @Override
+                                            public void onResponse(JSONObject response) {
+
+                                                System.out.println(">>>>>>>>>>>success>>>>>>>>>>>>");
+                                                System.out.println(response);
+
+                                                Fragment fr = new RepaymentFragment();
+                                                FragmentManager fm = ((Activity) getContext()).getFragmentManager();
+                                                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                                                fragmentTransaction.replace(R.id.fragmentPlace, fr);
+                                                fragmentTransaction.commit();
+
+
+                                            }
+                                        },
+                                        new Response.ErrorListener() {
+                                            @Override
+                                            public void onErrorResponse(VolleyError error) {
+                                                System.out.println(">>>>>>>>>>>>>>>>>>errorrrrrr>>>>>");
+                                                String body;
+                                                try {
+                                                    body = new String(error.networkResponse.data,"UTF-8");
+                                                    System.out.println(body);
+                                                } catch (UnsupportedEncodingException e) {
+                                                    e.printStackTrace();
+                                                }
+                                            }
+
+                                        }){
+                                    @Override
+                                    public Map<String, String> getHeaders() throws AuthFailureError {
+                                        HashMap<String, String> headers = new HashMap<String, String>();
+                                        Context context = getContext();
+                                        AppPrefs appPrefs = new AppPrefs(context);
+                                        String token = appPrefs.getToken();
+                                        headers.put("Authorization", "Token"+" "+token);
+                                        System.out.println(headers);
+                                        return headers;
+                                    }
+                                };
+
+                                RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+                                requestQueue.add(jsonObjectRequest);
 
 
 
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("borrower_id", borrowerid);
-                params.put("emi", Amount);
-                params.put("transactions_type", transactions_type);
-                params.put("payment_mode", payment_mode);
-
-
-                JSONObject parameters = new JSONObject(params);
-                System.out.println(">>>>>>>>>>>>>>>>>>LTG>>>>>>>>>>>>"+parameters);
-
-                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, POST_REPAYMENT, parameters,
-                        new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-
-                                System.out.println(">>>>>>>>>>>success>>>>>>>>>>>>");
-                                System.out.println(response);
-
+                                dialog.cancel();
                             }
-                        },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                System.out.println(">>>>>>>>>>>>>>>>>>errorrrrrr>>>>>");
-                                String body;
-                                try {
-                                    body = new String(error.networkResponse.data,"UTF-8");
-                                    System.out.println(body);
-                                } catch (UnsupportedEncodingException e) {
-                                    e.printStackTrace();
-                                }
+                        });
+
+                builder1.setNegativeButton(
+                        "Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
                             }
+                        });
 
-                        }){
-                    @Override
-                    public Map<String, String> getHeaders() throws AuthFailureError {
-                        HashMap<String, String> headers = new HashMap<String, String>();
-                        Context context = getContext();
-                        AppPrefs appPrefs = new AppPrefs(context);
-                        String token = appPrefs.getToken();
-                        headers.put("Authorization", "Token"+" "+token);
-                        System.out.println(headers);
-                        return headers;
-                    }
-                };
-
-                RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-                requestQueue.add(jsonObjectRequest);
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
 
 
             }

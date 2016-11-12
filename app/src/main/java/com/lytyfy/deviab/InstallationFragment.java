@@ -66,6 +66,7 @@ public class InstallationFragment extends ListFragment {
 
                                 InstallationBorrower newUser = new InstallationBorrower(first_name+" "+last_name, address, "8109109789",borrower_id);
                                 adapter.add(newUser);
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
