@@ -15,6 +15,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/logo"
+        android:layout_marginTop="48dp"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/fragmentPlace"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="1.4 billion people in the world have no access to power and 400 million of them live in rural India. Lytyfy aims to eradicate energy inequity in India and our mission is to provide reliable and affordable energy services to low income rural customers. We promote clean energy access in rural India by synergizing community engagement, technology and finance."
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView15"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Because Light is Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_marginTop="114dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
-
-

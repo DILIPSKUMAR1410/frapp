@@ -1,8 +1,10 @@
 package com.lytyfy.deviab;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -85,7 +87,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } catch (UnsupportedEncodingException e) {
                             e.printStackTrace();
                         }
-                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+//                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+
+                        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                        alertDialog.setTitle("Error Message");
+                        alertDialog.setMessage("Username or password is not correct");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
+
                     }
                 });
 
